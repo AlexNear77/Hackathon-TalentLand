@@ -1,40 +1,21 @@
 from flask import Flask
 from flask_login.utils import login_required
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from os import path
 from flask_login import LoginManager, login_manager
-from decouple import config
 
 # Routes
 from .views import views
 
-# db = SQLAlchemy()
-# DB_NAME = "database.db"
+# Database
+from .db import db, app
 
-def create_app():
-    app = Flask(__name__)
-    # app.config['SECRET_KEY'] = config('SECRET_KEY')
-    # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    # db.init_app(app)    
 
-    # Blueprints
-    # app.register_blueprint(auth, url_prefix='/')
-    app.register_blueprint(views, url_prefix='/')
+# Blueprints
+# app.register_blueprint(auth, url_prefix='/')
+app.register_blueprint(views, url_prefix='/')
 
-    # from ..models.models import User, Note
-    # # create_database(app) 
-
-    # login_manager = LoginManager()
-    # login_manager.login_view = 'auth.login'
-    # login_manager.init_app(app)
-    
-    # @login_manager.user_loader
-    # def load_user(id):
-    #     return User.query.get(int(id))
-
-    return app
-
-# def create_database(app):
-#     if not path.exists('website/' + DB_NAME):
-#         db.create_all(app=app)
-#         print('Created Database!')
+## Aqui pongo los modelos (tablas)
+# from .models import user
+# from ..models.models import User, Note
