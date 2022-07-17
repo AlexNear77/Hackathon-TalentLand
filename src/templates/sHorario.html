@@ -1,0 +1,29 @@
+{% extends "base_asesoria.html" %}
+
+{% block form %} 
+<form action="">
+    <h1 class="heading">Selecciona una fecha</h1>
+    <input type="date" name="bday" id="fechaReserva" min="2017-01-01"/>
+    </div>
+    <div class="inputcaja">
+        <input type="text" disabled>
+    </div>
+    <div class="bottons">
+        <a href="/sHora" class="btn"><i class="fa-solid fa-badge-check"></i>Siguiente</a>
+    </div>
+</form>
+{% endblock %}
+
+
+<script>
+    var fecha = new Date();
+    var anio = fecha.getFullYear();
+    var dia = fecha.getDate();
+    var _mes = fecha.getMonth();
+    _mes = _mes + 1;
+    if (_mes < 10)
+    { var mes = "0" + _mes;}
+    else
+    { var mes = _mes.toString;}
+    document.getElementById("fechaReserva").min = anio+'-'+mes+'-'+dia;
+</script>

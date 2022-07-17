@@ -1,0 +1,21 @@
+{% extends "base_asesoria.html" %}
+
+{% block form %} 
+<form action="">
+    <h1 class="heading">Selecciona una materia</h1>
+    <div class="inputcaja">
+        <select name="lenguaje">
+            <option selected="true" disabled="disabled">seleccione respuesta</option>
+            <option>Matemáticas</option> 
+            <option>Física</option>
+            <option>Química</option>
+        </select>
+    </div>
+    <div class="inputcaja">
+        <input type="text" disabled>
+    </div>
+    <div class="bottons">
+        <a href="/sHorario" class="btn"><i class="fa-solid fa-badge-check"></i>Siguiente</a>
+    </div>
+</form>
+{% endblock %}

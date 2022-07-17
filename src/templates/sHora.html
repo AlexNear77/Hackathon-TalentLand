@@ -1,0 +1,21 @@
+{% extends "base_asesoria.html" %}
+
+{% block form %} 
+<form action="">
+    <h1 class="heading">Selecciona un horario disponible para la asesoria</h1>
+    <div class="inputcaja">
+        <select name="lenguaje">
+            <option selected="true" disabled="disabled">seleccione respuesta</option>
+            <option>12:00</option> 
+            <option>13:00</option>
+            <option>14:00</option>
+        </select>
+    </div>
+    <div class="inputcaja">
+        <input type="text" disabled>
+    </div>
+    <div class="bottons">
+        <a href="/felicidades" class="btn"><i class="fa-solid fa-badge-check"></i>Siguiente</a>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body %} 
+<header>
+    <a href="#" class="logo">
+        <span>EDUCA</span>tionery
+    </a>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fa fa-bars"></label>
+    <nav class="navbar">
+        <a href="/index.html">inicio</a>
+    </nav>
+
+</header>
+<section class="login" id="login">
+    <form action="">
+        <h1 class="heading">Identificate</h1>
+        <div class="inputcaja">
+            <label for="">Soy padre o tutor</label>
+            <input type="radio" name="transporte" value="1">
+        </div>
+        
+        <br>
+        <div class="inputcaja">
+            <label for="">Soy profesor</label>
+            <input type="radio" name="transporte" value="1">
+        </div>
+        <div class="bottons">
+            <a href="/index.html" class="btn"><i class="fa-solid fa-badge-check"></i>Enviar</a>
+        </div>
+    </form>
+</section>
+{% endblock %}
