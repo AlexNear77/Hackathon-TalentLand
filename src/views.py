@@ -1,9 +1,11 @@
+import json
 from flask import Blueprint, render_template, jsonify
 from flask_login import login_required, current_user
 from werkzeug.wrappers import request
 from flask import flash, request
 # from .. import db
-import json
+from .utils import form_recognizer
+
 
 views = Blueprint('views', __name__)
 
@@ -25,6 +27,16 @@ def register():
 @views.route('/createA', methods=['GET'])
 def createA():
     return render_template("createA.html")
+
+
+@views.route('/createP', methods=['GET'])
+def createP():
+    return render_template("createP.html")
+
+
+@views.route('/createPF', methods=['GET'])
+def createPF():
+    return render_template("createPF.html")
 
 
 @views.route('/revision', methods=['GET'])
@@ -57,3 +69,6 @@ def sAsesoria():
     return render_template("sAsesoria.html")
 
 
+@views.route('/test', methods=['GET'])
+def test():
+    return render_template("test.html", variable=form_recognizer.palabra)
