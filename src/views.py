@@ -15,7 +15,7 @@ def home():
     return render_template("index.html")
     
 
-@views.route('/login', methods=['GET'])
+@views.route('/login', methods=['GET', 'POST'])
 def login():
     return render_template("login.html")
 
