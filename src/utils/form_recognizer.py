@@ -4,6 +4,7 @@ from azure.core.exceptions import ResourceNotFoundError
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import FormRecognizerClient 
 
+datos = {}
 
 def extract_id_field_value(id_card, field_name):
     try:
@@ -11,6 +12,7 @@ def extract_id_field_value(id_card, field_name):
         print('-'*25)
         print('Field Value: {0}'.format(id_card.fields.get(field_name).value))
         print('Confidence Score: {0}'.format(id_card.fields.get(field_name).confidence))
+        datos[field_name] = id_card.fields.get(field_name).value
         print()
     except AttributeError:
         print('Nothing returned')
@@ -40,4 +42,4 @@ if poller.status() == 'succeeded':
             extract_id_field_value(form, field_name)
 
 
-palabra="GABRIEL"
+print(datos)

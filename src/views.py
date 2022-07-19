@@ -6,6 +6,7 @@ from flask import flash, request
 # from .. import db
 from .utils import form_recognizer
 
+d = form_recognizer.datos
 
 views = Blueprint('views', __name__)
 
@@ -71,4 +72,4 @@ def sAsesoria():
 
 @views.route('/test', methods=['GET'])
 def test():
-    return render_template("test.html", variable=form_recognizer.palabra)
+    return render_template("test.html", dic=d, nombre="FirstName", apellido="LastName", edad=str(2022-d["DateOfBirth"].year))
