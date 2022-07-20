@@ -21,8 +21,11 @@ def extract_id_field_value(id_card, field_name):
 # API_KEY = credentials['API_KEY']
 # ENDPOINT = credentials['ENDPOINT']
 
-API_KEY = os.getenv('API_KEY')
-ENDPOINT = os.getenv('ENDPOINT')
+# API_KEY = os.getenv('API_KEY')
+# ENDPOINT = os.getenv('ENDPOINT')
+
+API_KEY = "11e0785b905a46259a86c40faba12205"
+ENDPOINT = "https://educa-form-recognizer.cognitiveservices.azure.com/"
 
 form_recognizer_client = FormRecognizerClient(ENDPOINT, AzureKeyCredential(API_KEY))
 
