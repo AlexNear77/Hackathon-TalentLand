@@ -4,6 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from decouple import config
+import os
 
 import urllib
 
@@ -12,10 +13,10 @@ import urllib
 
 # Connect String: mssql+pyodbc://{dbuser}:{dbpass}@{dbhost}/{dbname}
 database_uri = 'mssql+pyodbc://{dbuser}:{dbpass}@{dbhost}/{dbname}'.format(
-    dbuser = config('DBUSER'),
-    dbpass = config('DBPASS'),
-    dbhost = config('DBHOST'),
-    dbname = config('DBNAME')
+    dbuser = os.getenv('DBUSER'),
+    dbpass = os.getenv('DBPASS'),
+    dbhost = os.getenv('DBHOST'),
+    dbname = os.getenv('DBNAME')
 )
 
 # app = Flask(__name__)
@@ -25,7 +26,8 @@ database_uri = 'mssql+pyodbc://{dbuser}:{dbpass}@{dbhost}/{dbname}'.format(
 
 # # # def create_app():
 app = Flask(__name__)
-app.config['SECRET_KEY'] = config('SECRET_KEY')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+API_KEY = ('API_KEY')
 
 app.config.update(
     SQLALCHEMY_DATABASE_URI=database_uri,
