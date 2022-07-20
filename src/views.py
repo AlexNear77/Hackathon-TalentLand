@@ -4,9 +4,9 @@ from flask_login import login_required, current_user
 from werkzeug.wrappers import request
 from flask import flash, request
 # from .. import db
-from .utils import form_recognizer
+#from .utils import form_recognizer
 
-d = form_recognizer.datos
+# d = form_recognizer.datos
 
 views = Blueprint('views', __name__)
 
@@ -69,7 +69,14 @@ def sHora():
 def sAsesoria():
     return render_template("sAsesoria.html")
 
+@views.route('/createP2', methods=['GET'])
+def createP2():
+    return render_template("createP2.html")
 
-@views.route('/test', methods=['GET'])
-def test():
-    return render_template("test.html", dic=d, nombre="FirstName", apellido="LastName", edad=str(2022-d["DateOfBirth"].year))
+@views.route('/index', methods=['GET'])
+def index():
+    return render_template("index.html")
+
+# @views.route('/test', methods=['GET'])
+# def test():
+#     return render_template("test.html", dic=d, nombre="FirstName", apellido="LastName", edad=str(2022-d["DateOfBirth"].year))

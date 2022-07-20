@@ -26,28 +26,7 @@
     </header>
     <section class="login" id="login">
         <form action="">
-            <h1 class="heading">{% block header %}Revise y complete sus datos{% endblock %}</h1>
-            
-            <div class="inputcaja">
-                <input type="text" required>
-                <label for="">nombre del usuario</label>
-            </div>
-            <div class="inputcaja">
-                <input disabled type="text" required>
-                <label for="">Nombres</label>
-            </div>
-            <div class="inputcaja">
-                <input disabled type="text" required>
-                <label for="">Apellido Paterno</label>
-            </div>
-            <div class="inputcaja">
-                <input disabled type="text" required>
-                <label for="">Edad</label>
-            </div>
-            <div class="inputcaja">
-                <input type="text" required>
-                <label for="">Contraseña</label>
-            </div>
+            <h1 class="heading">{% block header %}Ingresa tu identificacion de manera legible{% endblock %}</h1>
             {% block div %} 
             <div class="bottons">
                 <a href="/revision" class="btn"><i class="fa-solid fa-badge-check"></i>Enviar</a>
