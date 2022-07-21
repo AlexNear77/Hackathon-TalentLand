@@ -1,16 +1,43 @@
-{% extends "sn_base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block div %}     
-<div class="caja-contenedor">
-    <h1>Suba su indentificación de manera legible</h1>
-    <div class="caja">
-        <div class="bottons">
-            <input type="file" class="btn" name="" id="">
-        </div>
-    </div>
-</div>
-<a> `</a>
-<div class="bottons">
-    <a href="/createP2" class="btn"><i class="fa-solid fa-badge-check"></i>Enviar</a>
-</div>
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>EDUCAtionery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <span>EDUCA</span>tionery
+        </a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fa fa-bars"></label>
+        <nav class="navbar">
+            <a href="/">inicio</a>
+        </nav>
+    </header>
+
+    <section class="login" id="login">
+        <form action="">
+            <h1 class="heading">Ingresa tu identificacion de manera legible</h1>
+            <h3>Sube tu INE</h3>
+            <div class="bottons">
+                <input type="file" class="btn" name="" id="">
+            </div>
+            <br>
+            {% block div %} 
+            <br>
+            <div class="bottons">
+                <a href="/createP2" class="btn"><i class="fa-solid fa-badge-check"></i>Enviar</a>
+            </div>
+            {% endblock %}
+        </form>
+    </section>
+</body>
+
+</html>

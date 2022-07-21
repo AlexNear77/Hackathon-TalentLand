@@ -35,9 +35,19 @@ def createP():
     return render_template("createP.html")
 
 
+@views.route('/createP2', methods=['GET'])
+def createP2():
+    return render_template("createP2.html")
+
+
 @views.route('/createPF', methods=['GET'])
 def createPF():
     return render_template("createPF.html")
+
+
+@views.route('/createPF2', methods=['GET'])
+def createPF2():
+    return render_template("createPF2.html")
 
 
 @views.route('/revision', methods=['GET'])
@@ -69,13 +79,6 @@ def sHora():
 def sAsesoria():
     return render_template("sAsesoria.html")
 
-@views.route('/createP2', methods=['GET'])
-def createP2():
-    return render_template("createP2.html")
-
-@views.route('/index', methods=['GET'])
-def index():
-    return render_template("index.html")
 
 @views.route('/test', methods=['GET'])
 def test():
