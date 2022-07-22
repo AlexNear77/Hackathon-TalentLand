@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block body %} 
+<header>
+    <a href="#" class="logo">
+        <span>EDUCA</span>tionery
+    </a>
+    <!--Cambie algunos nombres de nuestros a y el orden-->
+    <!--Agregue un cerrar sesion-->
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fa fa-bars"></label>
+    <nav class="navbar">
+        <a href="/login">Inicio de sesion</a>
+        <a href="/register">Crear cuenta</a>
+    </nav>
+
+</header>
+<section class="inicio" id="inicio">
+    <div class="content">
+        <h3>Con nosotros puedes aprender<span> 
+            <div class="lista">
+                <div class="item">
+                    !Matemáticas¡
+                </div>
+                <div class="item">
+                    !Física¡
+                </div>
+                <div class="item">
+                    !Química¡
+                </div>
+                <div class="item">
+                    !Ingles¡
+                </div>  
+            </div>
+            </span>
+        </h3>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <a href="#ranking" class="btn">¿Quienes somos?</a>
+    </div>
+    <div class="image">
+    <!-- <img src="img/niño.png" alt=""> -->
+    <img src="{{url_for('static', filename='img/niño.png')}}" alt="">
+    </div>
+</section>
+<section class="ranking" id="ranking">
+    <br/>
+    <br/>
+    <h1 class="heading">Somos la plataforma que cambiara tu futuro</h1>
+    <div class="columna">
+        <div class="image">
+            <center>
+                <!-- <img src="img/libros.png" alt=""> -->
+                <img src="{{url_for('static', filename='img/libros.png')}}" alt="">
+            </center>
+                
+            
+        </div>
+        <div class="content">
+            <h3>¿En que consiste?</h3>
+            <p>
+                Nosotros ayudamos a mejorar y reforzar tus conocimientos al impartirte clases con personas empecializadas en el area de tu interes.
+            </p>
+            <p>
+                Cada profesor podrá impartir clases de cualquier area de tu interes, desde matematicas hasta ingles mediente nuestra plataforma de manera
+                segura y gratuita.
+            </p>
+            <div class="bottons">
+                <a href="/reto" class="btn"><i class="fa-solid fa-code"></i> Realizar prueba</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="prueba" id="prueba">
+    <h1 class="heading">Las materías mas demandadas</h1>
+    <div class="caja-contenedor">
+        <div class="caja">
+
+            <i class="fa-solid fa-laptop-code"></i>
+            <div class="user">
+                <!-- <img src="img/mate.png" alt=""> -->
+                <img src="{{url_for('static', filename='img/mate.png')}}" alt="">
+
+                <h3>Matemáticas</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="caja">
+            <i class="fa-solid fa-laptop-code"></i>
+            <div class="user">
+                <!-- <img src="img/fisica.png" alt=""> -->
+                <img src="{{url_for('static', filename='img/fisica.png')}}" alt="">
+
+                <h3>Física</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="caja">
+            <i class="fa-solid fa-laptop-code"></i>
+            <div class="user">
+                <!-- <img src="img/quimica.png" alt=""> -->
+                <img src="{{url_for('static', filename='img/quimica.png')}}" alt="">
+
+                <h3>Química</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+

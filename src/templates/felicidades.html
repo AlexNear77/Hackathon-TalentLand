@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %} 
+<header>
+    <a href="#" class="logo">
+        <span>EDUCA</span>tionery
+    </a>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fa fa-bars"></label>
+    <nav class="navbar">
+        <a href="/gView">inicio</a>
+    </nav>
+
+</header>
+<section class="aseso" id="aseso">
+    <div class="image">
+        <!-- <img src="/img/Escuela.png" alt=""> -->
+        <img src="{{url_for('static', filename='img/Escuela.png')}}" alt="">
+
+    </div>
+    <form action="">
+        <h5 class="heading">felicidades</h5> 
+        <h1 class="heading">Se agendo con exito tu asesoria</h1>
+        <div class="inputcaja">
+            <input type="text" disabled>
+            <h1>Revisa tus mensajes, ahí te llegará el link de la asesoria</h1>
+            <input type="text" disabled>
+        </div>
+        <div class="bottons">
+            <a href="/gView" class="btn"><i class="fa-solid fa-badge-check"></i>Inicio</a>
+        </div>
+    </form>
+</section>
+</body>
+{% endblock %}
