@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %} 
+<header>
+    <a href="#" class="logo">
+        <span>NI</span>TE
+    </a>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fa fa-bars"></label>
+    <nav class="navbar">
+        <a href="/index">inicio</a>
+    </nav>
+</header>
+
+<section class="login" id="login">
+    <div class="image">
+        <!-- <img src="../img/question.png" alt=""> -->
+    <img src="{{url_for('static', filename='img/question.png')}}" alt="">
+    </div>
+
+    <form action="">
+        <h1 class="heading">Actualmente tus datos se encuentran en revision
+        </h1>
+        <h3>Activaremos tu cuenta
+            lo antes posible</h3>
+        <div class="bottons">
+            <a href="/index" class="btn"><i class="fa-solid fa-badge-check"></i>Volver al inicio</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

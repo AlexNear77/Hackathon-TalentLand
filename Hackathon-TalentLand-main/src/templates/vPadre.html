@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>CodexBook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <span>CODEX</span>book
+        </a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fa fa-bars"></label>
+        <nav class="navbar">
+            <a href="/">inicio</a>
+        </nav>
+
+    </header>
+    <section class="prueba" id="prueba">
+        <h1 class="heading">Visualiza el progreso de tu hijo</h1>
+        <!--Elimine el select y el div que lo contenia-->
+        <div class="caja-contenedor">
+                <div class="caja">
+                    <div class="user">
+                        <h3>Uriel Badillo Garrido</h3>
+                    </div>
+                        <div class="caja">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <div class="user">
+                                <!-- <img src="img/icono1.png" alt=""> -->
+                                <img src="{{url_for('static', filename='img/icono1.png')}}" alt="">
+
+                                <h3>Top 1</h3>
+                                <h3>Uriel Badillo Garrido</h3>
+                                <div class="comentarios">
+                                    96% en java
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caja">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <div class="user">
+                                <!-- <img src="img/icono1.png" alt=""> -->
+                                <img src="{{url_for('static', filename='img/icono1.png')}}" alt="">
+                                <h3>Top 1</h3>
+                                <h3>Uriel Badillo Garrido</h3>
+                                <div class="comentarios">
+                                    96% en java
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+
+</html>

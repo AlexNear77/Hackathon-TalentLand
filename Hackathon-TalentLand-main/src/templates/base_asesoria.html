@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Asesorias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <span>NI</span>TE
+        </a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fa fa-bars"></label>
+        <nav class="navbar">
+            <a href="/gView">inicio</a>
+        </nav>
+
+    </header>
+    <section class="aseso" id="aseso">
+        <div class="image">
+            <img src="{{url_for('static', filename='img/prof.png')}}" alt="">
+        </div>
+        {% block form %} 
+
+        {% endblock %}
+    </section>
+
+    <script
+        type="text/javascript"
+        src="{{ url_for('static', filename='scripts/index.js') }}"
+    ></script>
+    
+</body>
+
+</html>
+
+
+
+

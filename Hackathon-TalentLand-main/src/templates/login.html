@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %} 
+<header>
+    <a href="#" class="logo">
+        <span>NI</span>TE
+    </a>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fa fa-bars"></label>
+    <nav class="navbar">
+        <a href="/index">inicio</a>
+    </nav>
+</header>
+
+<section class="login" id="login">
+    <form method="POST" action="">
+        <h1 class="heading">Ingresa tus datos</h1>
+        <div class="inputcaja">
+            <input type="text" required>
+            <label for="">Nombre de usuario</label>
+        </div>
+        <div class="inputcaja">
+            <input type="password" required>
+            <label for="">Contraseña</label>
+        </div>
+        <div class="bottons">
+            <a href="/index" class="btn"><i class="fa-solid fa-badge-check"></i>Iniciar sesion</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Alumno</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <span>NI</span>TE
+        </a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fa fa-bars"></label>
+        <nav class="navbar">
+            <a href="#cursos">Mis cursos</a>
+            <a href="#cursos">Inscribir</a>
+            <a href="/sAsesoria"><i class="fa-solid fa-bell-on"></i>Asesorias</a>
+            <a href="/profile.html">Mi perfil</a>
+            <a href="#ranking">Mensajes</a>
+            <a href="/general.html">Cerrar sesion</a>
+        </nav>
+
+    </header>
+    <section class="presentacion" id="presentacion">
+        <div class="content">
+            <h4>Para cada estudiante, 
+                cada salón de clases. Resultados reales...<br><span>¿Listo para aprender?</span></h4> 
+        </div>
+    </section>
+    <section class="cursos" id="cursos">
+        <h1 class="heading">Cursos a los que estas inscrito</h1>
+        <div class="caja-contenedor">
+            <div class="caja">
+                <h3>Matemáticas</h3>
+                <p>Profesor: Juan Pablo</p>
+                <div class="bottons">
+                    <a href="/ranking.html" class="btn"><i class="fa-solid fa-code"></i> Ver Curso</a>
+                </div>
+            </div>
+            <div class="caja">
+                <h3>Física</h3>
+                <p>Profesor: Raul Zavala
+                </p>
+                <div class="bottons">
+                    <a href="/python.html" class="btn"><i class="fa-solid fa-code"></i> Ver Curso</a>
+                </div>
+            </div>
+            <div class="caja">
+                <h3>Química</h3>
+                <p>Profesor: Ilse Lopez
+                </p>
+                <div class="bottons">
+                    <a href="/javascript.html" class="btn"><i class="fa-solid fa-code"></i> Ver Curso</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ranking" id="ranking">
+        <h1 class="heading">Realiza una prueba con nosotros y consigue trabajo</h1>
+        <div class="columna">
+            <div class="image">
+                <img src="img/dino.png" alt="">
+            </div>
+            <div class="content">
+                <h3>¿En que consiste?</h3>
+                <p>
+                    Se realiza una prueba la cual tendrá que tener opciones de entrada y las salidas
+                    que tenga seran evaludas por nuestros expertos.
+                </p>
+                <p>
+                    Al finalizar nuestras pruebas y entregarte tu nivel, te mostraremos las empresas que
+                    tienen intereses en personas con tus habilidades y tendras la opcion de mandar tu CV.
+                </p>
+                <div class="bottons">
+                    <a href="/reto.html" class="btn"><i class="fa-solid fa-code"></i> Realizar prueba</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="prueba" id="prueba">
+        <h1 class="heading">comentarios de los mejores programadores</h1>
+        <div class="caja-contenedor">
+            <div class="caja">
+
+                <!--Cambie de ser un ranking a comentarios de los usuarios-->
+
+                <i class="fa-solid fa-laptop-code"></i>
+                <div class="user">
+                    <img src="img/icono1.png" alt="">
+                    <h3>Uriel</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="comentarios">
+                        Me parece una plataforma excelente para ver el nivel de tus habílidades y así ver en que puedo mejorar, me 
+                        gusto bastante el que me puedan recomentar los puestos para los que mas en cajo 
+                    </div>
+                </div>
+            </div>
+
+            <!--Cambie de ser un ranking a comentarios de los usuarios-->
+
+            <div class="caja">
+                <i class="fa-solid fa-laptop-code"></i>
+                <div class="user">
+                    <img src="img/icono2.png" alt="">
+                    <h3>Gabriel</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="comentarios">
+                        Me parece una plataforma excelente para ver el nivel de tus habílidades y así ver en que puedo mejorar, me 
+                        gusto bastante el que me puedan recomentar los puestos para los que mas en cajo 
+                    </div>
+                </div>
+            </div>
+
+            <!--Cambie de ser un ranking a comentarios de los usuarios-->
+
+            <div class="caja">
+                <i class="fa-solid fa-laptop-code"></i>
+                <div class="user">
+                    <img src="img/icono3.png" alt="">
+                    <h3>Marifer</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="comentarios">
+                        Me parece una plataforma excelente para ver el nivel de tus habílidades y así ver en que puedo mejorar, me 
+                        gusto bastante el que me puedan recomentar los puestos para los que mas en cajo 
+                    </div>
+                </div>
+            </div>
+            <!--Cambio-->
+            <!--Cambio-->
+            <!--Cambio-->
+            <!--Cambio-->
+            <!--Cambio-->
+            <!--Elimine boton-->
+        </div>
+    </section>
+</body>
+
+</html>
