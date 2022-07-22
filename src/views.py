@@ -80,6 +80,11 @@ def sAsesoria():
     return render_template("sAsesoria.html")
 
 
+@views.route('/vPadre', methods=['GET'])
+def vPadre():
+    return render_template("vPadre.html")
+
+
 @views.route('/test', methods=['GET'])
 def test():
     return render_template("test.html", dic=d, nombre="FirstName", apellido="LastName", edad=str(2022-d["DateOfBirth"].year))
